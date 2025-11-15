@@ -2,6 +2,8 @@ import { useEffect, useMemo, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Search, Feather, Bookmark, PlusCircle } from 'lucide-react'
 import PapyrusNote from './components/PapyrusNote'
+import DesertWind from './components/DesertWind'
+import Scarabs from './components/Scarabs'
 
 const API = import.meta.env.VITE_BACKEND_URL || 'http://localhost:8000'
 
@@ -78,6 +80,7 @@ export default function App() {
       <div className="fixed inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-b from-amber-100 via-amber-50 to-amber-100" />
         <HieroglyphParallax />
+        <DesertWind />
         <motion.div
           className="absolute inset-0"
           animate={{ backgroundPositionX: [0, 50, 0] }}
@@ -146,6 +149,7 @@ export default function App() {
             </motion.div>
           )}
         </div>
+        <Scarabs />
       </section>
 
       <FooterRibbon />
